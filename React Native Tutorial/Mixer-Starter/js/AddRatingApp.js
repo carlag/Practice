@@ -8,7 +8,8 @@ import ReactNative, {
   Navigator,
   TouchableOpacity,
   NativeModules,
-} from 'react-native';
+  NativeEventEmitter,
+ } from 'react-native';
 
 const { AddRatingManager } = NativeModules;
 const Rating = require('./Rating');
@@ -57,6 +58,7 @@ class AddRatingApp extends React.Component {
       identifier: props.identifier,
       currentRating: props.currentRating,
     }
+    this._subscription = null;
   }
 
   onRatingSelected(selectedRating) {
@@ -137,7 +139,19 @@ class AddRatingApp extends React.Component {
     );
   }
 
+  componentDidMount() {
+     const AddRatingManagerEvent = new NativeEventEmitter(AddRatingManager);
+     this._subscription = AddRatingManagerEvent.addListener(
+       'AddRatingManagerEvent',
+       (info) => {
+         console.log(JSON.stringify(info));
+       }
+     );
+   }
 
+   componentWillUnmount() {
+      this._subscription.remove();
+    }
 
 }
 
