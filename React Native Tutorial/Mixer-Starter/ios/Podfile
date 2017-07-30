@@ -1,0 +1,9 @@
+use_frameworks!
+target 'Mixer'
+pod 'React', :path => '../js/node_modules/react-native', :subspecs => [
+  'Core',
+  'RCTImage',
+  'RCTNetwork',
+  'RCTText',
+  'RCTWebSocket',
+]
