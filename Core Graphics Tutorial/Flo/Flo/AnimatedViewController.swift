@@ -11,7 +11,7 @@ import Foundation
 
 class AnimatedViewController : UIViewController {
     
-    @IBOutlet weak var arcView: CircleView!
+    @IBOutlet weak var arcView: AnimatedCircleView!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

@@ -1,0 +1,4 @@
+
+target 'Flo'
+
+pod 'AngleGradientLayer', '~> 1.0'
