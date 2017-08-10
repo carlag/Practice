@@ -14,6 +14,8 @@
 		21237EA81F3C5937005C8C38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21237EA61F3C5937005C8C38 /* LaunchScreen.storyboard */; };
 		21237EB31F3C59E8005C8C38 /* PushButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21237EB21F3C59E8005C8C38 /* PushButtonView.swift */; };
 		21237EB51F3C6461005C8C38 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21237EB41F3C6461005C8C38 /* CounterView.swift */; };
+		21237EB81F3C6DAD005C8C38 /* AnimatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21237EB71F3C6DAD005C8C38 /* AnimatedViewController.swift */; };
+		21237EBA1F3C6EBA005C8C38 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21237EB91F3C6EBA005C8C38 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		21237EA91F3C5937005C8C38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21237EB21F3C59E8005C8C38 /* PushButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonView.swift; sourceTree = "<group>"; };
 		21237EB41F3C6461005C8C38 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		21237EB71F3C6DAD005C8C38 /* AnimatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedViewController.swift; sourceTree = "<group>"; };
+		21237EB91F3C6EBA005C8C38 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,9 @@
 		21237E9C1F3C5937005C8C38 /* Flo */ = {
 			isa = PBXGroup;
 			children = (
+				21237EB61F3C6D99005C8C38 /* Controllers */,
 				21237EAF1F3C59A9005C8C38 /* Views */,
 				21237E9D1F3C5937005C8C38 /* AppDelegate.swift */,
-				21237E9F1F3C5937005C8C38 /* ViewController.swift */,
 				21237EA11F3C5937005C8C38 /* Main.storyboard */,
 				21237EA41F3C5937005C8C38 /* Assets.xcassets */,
 				21237EA61F3C5937005C8C38 /* LaunchScreen.storyboard */,
@@ -74,8 +78,18 @@
 			children = (
 				21237EB21F3C59E8005C8C38 /* PushButtonView.swift */,
 				21237EB41F3C6461005C8C38 /* CounterView.swift */,
+				21237EB91F3C6EBA005C8C38 /* CircleView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		21237EB61F3C6D99005C8C38 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21237E9F1F3C5937005C8C38 /* ViewController.swift */,
+				21237EB71F3C6DAD005C8C38 /* AnimatedViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21237EBA1F3C6EBA005C8C38 /* CircleView.swift in Sources */,
 				21237EA01F3C5937005C8C38 /* ViewController.swift in Sources */,
 				21237EB31F3C59E8005C8C38 /* PushButtonView.swift in Sources */,
+				21237EB81F3C6DAD005C8C38 /* AnimatedViewController.swift in Sources */,
 				21237E9E1F3C5937005C8C38 /* AppDelegate.swift in Sources */,
 				21237EB51F3C6461005C8C38 /* CounterView.swift in Sources */,
 			);
