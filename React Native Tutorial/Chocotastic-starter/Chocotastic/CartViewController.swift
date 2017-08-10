@@ -38,6 +38,10 @@ class CartViewController: UIViewController {
     configureFromCart()
   }
   
+  deinit {
+    print("deinit cart")
+  }
+  
   private func configureFromCart() {
     guard checkoutButton != nil else {
       //UI has not been instantiated yet. Bail!

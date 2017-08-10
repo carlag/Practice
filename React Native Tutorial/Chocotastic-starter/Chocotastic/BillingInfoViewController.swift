@@ -47,6 +47,10 @@ class BillingInfoViewController: UIViewController {
     
   }
   
+  deinit {
+    print("deinit billing")
+  }
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let identifier = identifierForSegue(segue: segue)
     switch identifier {

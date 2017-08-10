@@ -42,6 +42,10 @@ class ChocolatesOfTheWorldViewController: UIViewController {
     setupCellConfiguration()
     setupCellTapHandling()
   }
+  
+  deinit {
+    print("deinit chocolates of the world")
+  }
 
     //MARK: Rx Setup
   private func setupCartObserver() {
