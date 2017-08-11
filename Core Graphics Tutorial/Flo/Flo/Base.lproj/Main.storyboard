@@ -190,12 +190,10 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cad-6S-Ydt" firstAttribute="centerX" secondItem="LzO-3e-XZq" secondAttribute="centerX" id="4ja-p0-XzF"/>
                             <constraint firstItem="cad-6S-Ydt" firstAttribute="centerY" secondItem="LzO-3e-XZq" secondAttribute="centerY" id="DRY-r6-i0s"/>
-                            <constraint firstItem="vHh-E1-E2b" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cad-6S-Ydt" secondAttribute="bottom" constant="10" id="Raq-CM-bgP"/>
-                            <constraint firstItem="cad-6S-Ydt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8TX-sS-wje" secondAttribute="bottom" constant="10" id="ozB-PM-VZA"/>
                             <constraint firstItem="cad-6S-Ydt" firstAttribute="leading" secondItem="LzO-3e-XZq" secondAttribute="leadingMargin" constant="10" id="wK9-Va-bd3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cad-6S-Ydt" secondAttribute="trailing" constant="10" id="xDN-oN-sLf"/>
                         </constraints>
