@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eng-7O-cdK">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcj-xq-HT7" customClass="PushButtonView" customModule="Flo" customModuleProvider="target">
-                                <rect key="frame" x="162" y="470" width="50" height="50"/>
+                                <rect key="frame" x="308.5" y="470" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="FBg-Er-Vke"/>
                                     <constraint firstAttribute="width" constant="50" id="fWP-Ty-ldR"/>
@@ -40,7 +39,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQN-yQ-rLq" customClass="CounterView" customModule="Flo" customModuleProvider="target">
-                                <rect key="frame" x="72.5" y="90" width="230" height="230"/>
+                                <rect key="frame" x="218.5" y="90" width="230" height="230"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pH5-0H-O2A">
                                         <rect key="frame" x="93" y="93.5" width="44" height="44"/>
@@ -73,7 +72,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFe-56-fPi" customClass="PushButtonView" customModule="Flo" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="340" width="100" height="100"/>
+                                <rect key="frame" x="283.5" y="340" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Ty7-eh-0tW"/>
                                     <constraint firstAttribute="height" constant="100" id="xmK-ht-dLs"/>
@@ -118,11 +117,11 @@
                         <viewControllerLayoutGuide type="bottom" id="haB-S9-um4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2U8-gy-Y6X">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dl2-L9-AM3" customClass="AnimatedCircleView" customModule="Flo" customModuleProvider="target">
-                                <rect key="frame" x="62" y="208.5" width="250" height="250"/>
+                                <rect key="frame" x="208.5" y="62.5" width="250" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Gfe-aj-Gyz"/>
@@ -179,23 +178,22 @@
                         <viewControllerLayoutGuide type="bottom" id="vHh-E1-E2b"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LzO-3e-XZq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cad-6S-Ydt" customClass="ColorWheel" customModule="Flo" customModuleProvider="target">
-                                <rect key="frame" x="26" y="172" width="323" height="323"/>
+                                <rect key="frame" x="233.5" y="87.5" width="200" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="cad-6S-Ydt" secondAttribute="height" multiplier="1:1" id="FAb-x8-51u"/>
+                                    <constraint firstAttribute="width" secondItem="cad-6S-Ydt" secondAttribute="height" multiplier="1:1" id="DpJ-zI-Xqx"/>
+                                    <constraint firstAttribute="width" constant="200" id="uHb-Pc-HYR"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cad-6S-Ydt" firstAttribute="centerX" secondItem="LzO-3e-XZq" secondAttribute="centerX" id="4ja-p0-XzF"/>
-                            <constraint firstItem="cad-6S-Ydt" firstAttribute="centerY" secondItem="LzO-3e-XZq" secondAttribute="centerY" id="DRY-r6-i0s"/>
-                            <constraint firstItem="cad-6S-Ydt" firstAttribute="leading" secondItem="LzO-3e-XZq" secondAttribute="leadingMargin" constant="10" id="wK9-Va-bd3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cad-6S-Ydt" secondAttribute="trailing" constant="10" id="xDN-oN-sLf"/>
+                            <constraint firstItem="cad-6S-Ydt" firstAttribute="centerX" secondItem="LzO-3e-XZq" secondAttribute="centerX" id="cLM-0a-4Zg"/>
+                            <constraint firstItem="cad-6S-Ydt" firstAttribute="centerY" secondItem="LzO-3e-XZq" secondAttribute="centerY" id="s0C-jx-6gy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="66q-Mi-lEq"/>

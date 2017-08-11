@@ -7,21 +7,30 @@
 //
 import UIKit
 
+typealias Segment = (start: Int, end: Int, startColor: UIColor, endColor: UIColor)
 
+
+struct ColorPath {
+    var color:UIColor
+    var path:UIBezierPath
+}
 
 @IBDesignable
 class ColorWheel: UIView {
     @IBInspectable var size:CGSize=CGSize.zero { didSet { setNeedsDisplay()} }
     @IBInspectable var sectors:Int = 360 { didSet { setNeedsDisplay()} }
     
-    
-    private var image:UIImage?=nil
-//    //    var imageView:UIImageView?=nil
-//    var paths=[ColorPath]()
-
-    
-    
+//    override func awakeFromNib() {
+//        var frame = self.frame
+//        
+//        frame.size.width =
+//    }
+//    
     override func draw(_ rect : CGRect) {
+        
+        print("rect:")
+    print(rect)
+        
 //                let color1 : UIColor = .red
 //                let color2 : UIColor = .yellow
 //                let color3 : UIColor = .green
@@ -37,8 +46,7 @@ class ColorWheel: UIView {
         let arcWidth: CGFloat = 40
         let radius: CGFloat = max(bounds.width, bounds.height)/2 - arcWidth/2
         
-        center = CGPoint(x: frame.width / 2.0,
-                         y: frame.height / 2.0)
+
         
         let segment1 = Segment(start: 0, end: 10, startColor: color4, endColor: color4)
         let segment2 = Segment(start: 10, end: 15, startColor: color4, endColor: color1)
@@ -88,7 +96,7 @@ class ColorWheel: UIView {
             let color = getGradient(color1: startColor,
                                     color2: endColor,
                                     percent: CGFloat(percent))
-            print("sector: \(sector) -> \(color)")
+//            print("sector: \(sector) -> \(color)")
             self.setColorForSector(startAngle: sector, endAngle: (sector + 1.0), colorPath: colorPath, radius: radius, arcWidth:arcWidth, color: color)
         }
     }
@@ -97,8 +105,10 @@ class ColorWheel: UIView {
         let startAngle = (CGFloat(startAngle) + 0.5) * π/180
         let endAngle = (CGFloat(endAngle) + 0.5) * π/180
         var colorPath = colorPath
-        
-        colorPath.path = UIBezierPath(arcCenter: center,
+
+        let point = CGPoint(x: frame.size.width/2,
+                         y: frame.size.height/2)
+        colorPath.path = UIBezierPath(arcCenter: point,
                                       radius: radius,
                                       startAngle: startAngle,
                                       endAngle:  endAngle,
@@ -114,11 +124,21 @@ class ColorWheel: UIView {
         colorPath.path.fill()
         colorPath.path.stroke()
         colorPath.color = color
-        
-        //        paths.append(colorPath)
     }
     
     
 }
 
+extension UIColor {
+    var colorComponents: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)? {
+        guard let components = self.cgColor.components else { return nil }
+        
+        return (
+            red: components[0],
+            green: components[1],
+            blue: components[2],
+            alpha: components[3]
+        )
+    }
+}
 

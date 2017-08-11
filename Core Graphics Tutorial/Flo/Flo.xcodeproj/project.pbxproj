@@ -21,7 +21,6 @@
 		21237EBE1F3C7788005C8C38 /* NestedCirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21237EBD1F3C7788005C8C38 /* NestedCirclesView.swift */; };
 		21237EC01F3C89D9005C8C38 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 21237EBF1F3C89D9005C8C38 /* Podfile */; };
 		21237EC21F3CD448005C8C38 /* ColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21237EC11F3CD448005C8C38 /* ColorWheel.swift */; };
-		21237EC41F3CF27C005C8C38 /* ColorPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21237EC31F3CF27C005C8C38 /* ColorPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		21237EBD1F3C7788005C8C38 /* NestedCirclesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedCirclesView.swift; sourceTree = "<group>"; };
 		21237EBF1F3C89D9005C8C38 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		21237EC11F3CD448005C8C38 /* ColorWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWheel.swift; sourceTree = "<group>"; };
-		21237EC31F3CF27C005C8C38 /* ColorPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPath.swift; sourceTree = "<group>"; };
 		A6FDB371879AC840C6EDCCA7 /* Pods-Flo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flo/Pods-Flo.debug.xcconfig"; sourceTree = "<group>"; };
 		C92389401B41BCEBCE603319 /* Pods-Flo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flo/Pods-Flo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +78,6 @@
 		21237E9C1F3C5937005C8C38 /* Flo */ = {
 			isa = PBXGroup;
 			children = (
-				21237EC31F3CF27C005C8C38 /* ColorPath.swift */,
 				21237EB61F3C6D99005C8C38 /* Controllers */,
 				21237EAF1F3C59A9005C8C38 /* Views */,
 				21237E9D1F3C5937005C8C38 /* AppDelegate.swift */,
@@ -255,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21237EC41F3CF27C005C8C38 /* ColorPath.swift in Sources */,
 				21237EC21F3CD448005C8C38 /* ColorWheel.swift in Sources */,
 				21237EBA1F3C6EBA005C8C38 /* AnimatedCircleView.swift in Sources */,
 				21237EBC1F3C76DF005C8C38 /* NestedCirclesViewController.swift in Sources */,
