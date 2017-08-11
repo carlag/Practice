@@ -19,7 +19,6 @@ import UIKit
         super.awakeFromNib()
     }
     
-
     func animateCircle(duration: TimeInterval) {
         // We want to animate the strokeEnd property of the circleLayer
         let animation = CABasicAnimation(keyPath: "strokeEnd")

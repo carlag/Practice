@@ -7,7 +7,10 @@
 //
 import UIKit
 
-typealias Segment = (start: Int, end: Int, startColor: UIColor, endColor: UIColor)
+typealias Segment = (
+    start: Int,
+    startColor: UIColor
+)
 
 
 struct ColorPath {
@@ -17,28 +20,23 @@ struct ColorPath {
 
 @IBDesignable
 class ColorWheel: UIView {
-    @IBInspectable var size:CGSize=CGSize.zero { didSet { setNeedsDisplay()} }
-    @IBInspectable var sectors:Int = 360 { didSet { setNeedsDisplay()} }
-    
-//    override func awakeFromNib() {
-//        var frame = self.frame
-//        
-//        frame.size.width =
-//    }
+//    @IBInspectable var size:CGSize=CGSize.zero { didSet { setNeedsDisplay()} }
+//    @IBInspectable var sectors:Int = 360 { didSet { setNeedsDisplay()} }
 //    
+
     override func draw(_ rect : CGRect) {
-        
-        print("rect:")
-    print(rect)
         
 //                let color1 : UIColor = .red
 //                let color2 : UIColor = .yellow
 //                let color3 : UIColor = .green
 //                let color4 : UIColor = .blue
+        
+        
 //
-        let color1 : UIColor = UIColor(colorLiteralRed: 1/255, green: 167/255, blue: 221/255, alpha: 1.0)
-        let color2 : UIColor = UIColor(colorLiteralRed: 33/255, green: 181/255, blue: 225/255, alpha: 1.0)
-        let color3 : UIColor = UIColor(colorLiteralRed: 101/255, green: 212/255, blue: 239/255, alpha: 1.0)
+        
+        let color1 : UIColor = UIColor(colorLiteralRed: 1/255, green: 167/255, blue: 221/255, alpha: 1.0) //normal
+        let color2 : UIColor = UIColor(colorLiteralRed: 33/255, green: 181/255, blue: 225/255, alpha: 1.0) //medium
+        let color3 : UIColor = UIColor(colorLiteralRed: 101/255, green: 212/255, blue: 239/255, alpha: 1.0) //bright
         let color4 : UIColor = UIColor(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
 
         
@@ -48,31 +46,31 @@ class ColorWheel: UIView {
         
 
         
-        let segment1 = Segment(start: 0, end: 10, startColor: color4, endColor: color4)
-        let segment2 = Segment(start: 10, end: 15, startColor: color4, endColor: color1)
+        let segments = [
+            Segment(start: 0, startColor: color4)
+            ,Segment(start: 10, startColor: color4)
+            ,Segment(start: 15, startColor: color2)
+            ,Segment(start: 25, startColor: color2)
+            ,Segment(start: 30, startColor: color1)
+            ,Segment(start: 60, startColor: color1)
+            ,Segment(start: 70, startColor: color2)
+            ,Segment(start: 90, startColor: color2)
+            ,Segment(start: 120, startColor: color3)
+            ,Segment(start: 240, startColor: color3)
+            ,Segment(start: 300, startColor: color4)]
         
-        let segment3 = Segment(start: 15, end: 25, startColor: color1, endColor: color1)
-        let segment4 = Segment(start: 25, end: 30, startColor: color1, endColor: color2)
+        //we only count to segments.count - 1 because the last element is already accounted for in the 2nd last segment i.e. as the end of 2nd last element
+        for index in stride(from: 0, to: (segments.count-1), by: 1) {
+            let segment = segments[index]
+            let nextSegment = segments[index+1]
         
-        let segment5 = Segment(start: 30, end: 60, startColor: color2, endColor: color2)
-        let segment6 = Segment(start: 60, end: 70, startColor: color2, endColor: color3)
-        
-        let segment7 = Segment(start: 70, end: 90, startColor: color3, endColor: color3)
-        let segment8 = Segment(start: 90, end: 120, startColor: color3, endColor: color2)
-        
-        let segment9 = Segment(start: 120, end: 240, startColor: color2, endColor: color2)
-        let segment10 = Segment(start: 240, end: 300, startColor: color2, endColor: color4)
-        
-        let segments = [segment1, segment2, segment3, segment4, segment5, segment6, segment7, segment8, segment9, segment10]
-
-        for segment in segments {
             self.setColorForSector(startAngle: segment.start,
-                                   endAngle: segment.end,
+                                   endAngle: nextSegment.start,
                                    colorPath: colorPath,
                                    radius: radius,
                                    arcWidth: arcWidth,
                                    startColor: segment.startColor,
-                                   endColor: segment.endColor)
+                                   endColor: nextSegment.startColor)
         }
 
         
@@ -96,7 +94,6 @@ class ColorWheel: UIView {
             let color = getGradient(color1: startColor,
                                     color2: endColor,
                                     percent: CGFloat(percent))
-//            print("sector: \(sector) -> \(color)")
             self.setColorForSector(startAngle: sector, endAngle: (sector + 1.0), colorPath: colorPath, radius: radius, arcWidth:arcWidth, color: color)
         }
     }
@@ -114,10 +111,7 @@ class ColorWheel: UIView {
                                       endAngle:  endAngle,
                                       clockwise: true)
         
-        //        colorPath.path.addLine(to: center)
         colorPath.path.lineWidth = arcWidth
-        
-        //        colorPath.path.close()
         
         color.setFill()
         color.setStroke()
