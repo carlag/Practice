@@ -22,9 +22,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculateButtonTapped(_ sender: Any) {
-        for number in 0 ... 100_000_000 {
-            let isPrime = isPrimeNumber(number: number)
-            print("\(number) is prime: \(isPrime)")
+        let operationQueue = OperationQueue()
+        operationQueue.addOperation {
+            for number in 0 ... 100_000_000 {
+                let isPrime = self.isPrimeNumber(number: number)
+                print("\(number) is prime: \(isPrime)")
+            }
         }
     }
     
