@@ -9,10 +9,19 @@
 import XCTest
 @testable import ConcurrencyAndNetworking
 
+
+class MockURLSession: URLSessionProtocol {
+    
+}
+
 class ConcurrencyAndNetworkingTests: XCTestCase {
+    
+    var httpClient: HttpClient!
+    let session = MockURLSession()
     
     override func setUp() {
         super.setUp()
+        httpClient = HttpClient(session: session)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
